@@ -277,8 +277,26 @@ button {
     position: relative;
     overflow: hidden;
     margin: 1.5rem;
+    gap: 1.1rem;
 }
 
+.trending-content div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
+.trending-content div .names {
+    display: block;
+}
 
+.trending-content .names p:first-of-type {
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.trending-content img {
+    height: var(--dashboard-icon-size);
+    width: var(--dashboard-icon-size);
+}
 
