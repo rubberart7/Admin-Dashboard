@@ -191,6 +191,8 @@ button {
     display: grid;
     grid-template-columns: 3fr 1fr;
     background-color: aliceblue;
+    padding-top: 50px;
+    overflow: hidden;
 }
 
 .projects {
@@ -200,8 +202,6 @@ button {
     gap: 1.5rem;
     padding: 1.5rem;
 }
-
-
 
 .projects > div {
     background: #fff; /* Adjust the background color as needed */
@@ -229,15 +229,30 @@ button {
     border-bottom-left-radius: 8px;
 }
 
-
-
-
 .announcements-trending {
     grid-column: 2 / 3; /* Ensure this is the correct grid area for the announcements and trending section */
+    display: grid;
+    gap: 20px;
 }
 
+.announcements-content {
+    display: grid;
+    background: #fff; /* Adjust the background color as needed */
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    gap: 20px;
+}
 
+.announcements-content > div {
+    padding: 20px; /* Adjust as needed */
+    border-bottom: 1px solid black; /* Light gray border for separation */
+}
 
+.announcements-content > div:last-child {
+    border-bottom: none; /* Remove border for the last div */
+}
 
 
 
