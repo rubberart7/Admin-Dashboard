@@ -92,6 +92,7 @@ img {
     display: flex;
     gap: 15px;
     align-items: center;
+    font-weight: bolder;
 }
 
 .top-left img {
@@ -180,7 +181,22 @@ button {
 
 .text-container .line2 {
     font-size: 25px;
+    font-weight: bolder;
 }
+
+.main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Creates two columns with a 3:1 ratio */
+}
+
+.projects {
+    grid-column: 1; /* Places the projects section in the first column */
+}
+
+.announcements-trending {
+    grid-column: 2; /* Places the announcements and trending section in the second column */
+}
+
 
 
 
