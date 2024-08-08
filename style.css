@@ -90,7 +90,7 @@ img {
 .header .top-left, 
 .header .top-right {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
     font-weight: bolder;
 }
@@ -105,8 +105,8 @@ img {
     border-radius: 20px;
     width: 400px;
     height: 25px;
-    background-color: lightgray;
-    border: 1px solid lightgray;
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
 }
 
 
@@ -126,7 +126,7 @@ img {
     grid-template-rows: 1fr;
     grid-column-gap: var(--header-gap-top); /* Changed to vw */
     justify-content: center;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
 
 .header .bottom {
@@ -186,16 +186,30 @@ button {
 
 .main-content {
     display: grid;
-    grid-template-columns: 3fr 1fr; /* Creates two columns with a 3:1 ratio */
+    grid-template-columns: 3fr 1fr;
+    background-color: aliceblue;
 }
 
 .projects {
-    grid-column: 1; /* Places the projects section in the first column */
+    grid-column: 1 / 2; /* Ensure this is the correct grid area for the projects section */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.projects > div {
+    background: #fff; /* Adjust the background color as needed */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
 }
 
 .announcements-trending {
-    grid-column: 2; /* Places the announcements and trending section in the second column */
+    grid-column: 2 / 3; /* Ensure this is the correct grid area for the announcements and trending section */
 }
+
+
 
 
 
