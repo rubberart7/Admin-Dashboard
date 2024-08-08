@@ -79,6 +79,9 @@ img {
 
 .header {
     display: grid;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure positioning context for z-index */
+    z-index: 10; /* Adjust as needed */
 }
 
 .header img {
@@ -198,12 +201,36 @@ button {
     padding: 1.5rem;
 }
 
+
+
 .projects > div {
     background: #fff; /* Adjust the background color as needed */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 40px;
+    position: relative;
+    overflow: hidden;
 }
+
+.projects > div .project-icons {
+    display: flex;
+    gap: 1vw;
+    justify-content: flex-end;
+}
+
+.projects > div::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px; /* Width of the stripe */
+    height: 100%;
+    background-color: orange; /* Stripe color */
+    border-top-left-radius: 8px; /* Match the border radius of the container */
+    border-bottom-left-radius: 8px;
+}
+
+
+
 
 .announcements-trending {
     grid-column: 2 / 3; /* Ensure this is the correct grid area for the announcements and trending section */
